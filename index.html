@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="./assets/css/plus.css">
+	</head>
+	<body>
+		<div class="plusbox">
+			<div class="bigcontainer"></div>
+			<div class="container">
+				<!-- <div class="top shadow"></div> -->
+				<!-- <div class="right shadow"></div> -->
+				<!-- <div class="center shadow"></div> -->
+				<!-- <div class="bottom shadow"></div> -->
+				<!-- <div class="left shadow"></div> -->
+				<div class="one shadow"></div>
+				<div class="two shadow"></div>
+			</div>
+			<div class="line" id="line1"></div>
+			<div class="line" id="line2"></div>
+			<div class="line" id="line3"></div>
+			<div class="line" id="line4"></div>
+		</div>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
+		<script>
+			$(".container").hover(function(){$(".line").show().animate({"height":"12px"});}, function(){$(".line").hide().animate({"height":"0px"});});
+		$(".line").hide();
+
+			$(".container").hover(function (){$(".bigcontainer").animate({"width": "200px","height":"200px"},"slow");},function(){$(".bigcontainer").animate({"width": "175px","height":"175px"},"slow");});
+				
+
+			$(".container").hover(function(){$(".shadow").css({"box-shadow":"2px 2px 15px rgba(0,0,0,0.9)","transition":"all 2s"});},function(){$(".shadow").css({"box-shadow":"none","transition":"all 2s"});});
+			$(".container").hover(function(){$(".one").css({"width":"150px"});},function(){$(".one").css({"width":"140px"});});
+			$(".container").hover(function(){$(".two").css({"height":"150px"});},function(){$(".two").css({"height":"140px"});});
+
+		</script>
+	</body>
+</html>
